@@ -1,0 +1,92 @@
+/* SCROLLBAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(53, 50, 50);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(13, 67, 177);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(118, 152, 221);
+    border-radius: 10px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #000000;
+    overflow-x: hidden;
+  }
+  
+  /* CSS NAVBAR E LOGO */
+  nav {
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffffff;
+    /* background: white;  */
+    /* box-shadow: rgba(31, 38, 135, 0.37) 0px 8px 20px 0px; */
+    /* background-color:  #343434; */
+    margin: 0;
+    position: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  .changeStyle {
+    background-color: #343434;
+    box-shadow: 0 0 1em gray;
+  }
+  
+  .logo {
+    font-weight: 800;
+    font-size: 20px;
+  }
+  
+  .nav-itens {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .nav-itens li a {
+    padding-left: 20px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .nav-itens li a:hover {
+    color: #ffae34;
+  }
+  
+  .logo-img {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
+    /* vertical no centro. */
+  }
+  
