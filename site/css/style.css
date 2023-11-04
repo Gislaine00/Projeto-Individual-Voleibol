@@ -44,9 +44,6 @@
     justify-content: space-around;
     align-items: center;
     color: #ffffff;
-    /* background: white;  */
-    /* box-shadow: rgba(31, 38, 135, 0.37) 0px 8px 20px 0px; */
-    /* background-color:  #343434; */
     margin: 0;
     position: fixed;
     padding-top: 20px;
@@ -80,12 +77,13 @@
   }
   
   .nav-itens li a:hover {
-    color: #ffae34;
+    color: rgb(0, 89, 255);
   }
   
   .logo-img {
     width: 40px;
     height: auto;
+    border-radius: 50%;
     vertical-align: middle;
   }
 
@@ -151,7 +149,16 @@
   #radio2:checked ~ .nav-auto .auto-btn1{
     background-color: yellow;
   }
+
   #radio3:checked ~ .nav-auto .auto-btn1{
+    background-color: yellow;
+  }
+
+  #radio4:checked ~ .nav-auto .auto-btn1{
+    background-color: yellow;
+  }
+
+  #radio5:checked ~ .nav-auto .auto-btn1{
     background-color: yellow;
   }
 
@@ -165,6 +172,14 @@
 
   #radio3:checked ~ .primeiro{
     margin-left: -50%;
+  }
+
+  #radio4:checked ~ .primeiro{
+    margin-left: -75%;
+  }
+
+  #radio5:checked ~ .primeiro{
+    margin-left: -100%;
   }
 
 
