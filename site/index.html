@@ -6,8 +6,7 @@
     <link rel="icon" href="./assets/imgs/logoVolei.png" type="image/png">
     <title>Voleibol</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/Icones/style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <nav id="nav">
@@ -28,6 +27,38 @@
             </ul>
         </div>
     </nav>
+
+    <section class="slider">
+        <div class="slider-content">
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+
+            <div class="slide-box primeiro">
+                <img class="img" src="./assets/imgs/brasilFem1.jpg"> 
+            </div>
+
+            <div class="slide-box">
+                <img class="img" src="./assets/imgs/brasilMasc1.jpg">
+            </div>
+
+            <div class="slide-box">
+                <img class="img" src="./assets/imgs/bola1.jpg">
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
