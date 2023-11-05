@@ -1,4 +1,4 @@
-/* SCROLLBAR */
+/* Scrollbar*/
 * {
     margin: 0;
     padding: 0;
@@ -25,19 +25,23 @@
     background: rgb(118, 152, 221);
     border-radius: 10px;
   }
-  
+
+  @font-face {
+    font-family:'minhafonte';
+    src:url("../assets/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtaooCPNLA3JC9c.ttf");
+  }
+
   html {
     scroll-behavior: smooth;
   }
   
   body {
     margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #000000;
     overflow-x: hidden;
   }
   
-  /* CSS NAVBAR E LOGO */
+  /* Navbar e logo*/
   nav {
     background: transparent;
     display: flex;
@@ -51,11 +55,8 @@
     width: 100%;
     transition: 0.3s ease-in-out;
     z-index: 2;
-  }
-  
-  .changeStyle {
-    background-color: #343434;
-    box-shadow: 0 0 1em gray;
+    font-family: Cambria;
+    text-transform: uppercase;
   }
   
   .logo {
@@ -87,6 +88,7 @@
     vertical-align: middle;
   }
 
+/* Carrossel */
   section.slider{
     margin: 0 auto;
     width: 100%;
@@ -115,26 +117,25 @@
   .slide-box img{
     width: 100%;
     height: 580px;
-    
   }
 
-  .nav-manual/* , .nav-auto */{
+  .nav-manual, .nav-auto{
     position: absolute;
     width: 100%;
-    margin-top: 43%;
+    margin-top: 43.7%;
     display: flex;
     justify-content: center;
   }
 
-  .nav-manual .manual-btn/* , .nav-auto div */{
+  .nav-manual .manual-btn, .nav-auto div{
     border: 1px solid yellow;
-    padding: 10px;
+    padding: 6px;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.2s;
   }
 
-  .nav-manual .manual-btn:not(:last-child)/* , .nav-auto div:not(:last-child) */{
+  .nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
     margin-right: 10px;
   }
 
@@ -146,19 +147,15 @@
     background-color: yellow;
   }
 
-  #radio2:checked ~ .nav-auto .auto-btn1{
+  #radio2:checked ~ .nav-auto .auto-btn2{
     background-color: yellow;
   }
 
-  #radio3:checked ~ .nav-auto .auto-btn1{
+  #radio3:checked ~ .nav-auto .auto-btn3{
     background-color: yellow;
   }
 
-  #radio4:checked ~ .nav-auto .auto-btn1{
-    background-color: yellow;
-  }
-
-  #radio5:checked ~ .nav-auto .auto-btn1{
+  #radio4:checked ~ .nav-auto .auto-btn4{
     background-color: yellow;
   }
 
@@ -178,9 +175,79 @@
     margin-left: -75%;
   }
 
-  #radio5:checked ~ .primeiro{
-    margin-left: -100%;
-  }
+/* Sobre o projeto */
+.titulo{
+  color: white;
+  font-family: Cambria;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 35px;
+  font-size: 35px;
+}
 
+.imgTexto{
+  display: flex;
+  flex-direction: row;
+}
 
+.imgPrj{
+  width: 40%;
+  height: 40%;
+  margin-left: 50px;
+}
+
+.divTextoPrj{
+  width: 40%;
+  height: 40%;
+  margin-left: 135px;
+  margin-top: 80px;
+}
+
+.textinhoProjeto{
+  color: white;
+  font-family:'minhafonte';
+  font-size: 25px;
+  text-align: center;
+}
+
+/* Jogador */
+.caixinhasJogadorM{
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 3%;
+}
+
+.caixinhasJogadorF{
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 3%;
+}
+
+.caixinhaMasc{
+  background-color: rgb(59, 122, 204);
+  width: 23%;
+  height: 200px;
+  border-radius: 30px;
+}
+
+.caixinhaFem{
+  background-color: rgb(241, 243, 95);
+  width: 23%;
+  height: 200px;
+  border-radius: 30px;
+}
+
+.imgJogador{
+  width: 15%;
+  height: 90px;
+
+}
 
