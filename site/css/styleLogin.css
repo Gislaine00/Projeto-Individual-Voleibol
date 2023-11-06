@@ -1,0 +1,10 @@
+.DivImgFundo {
+    text-align: center;
+  }
+  
+  .imgFundo{
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    background-size: cover;
+  }
