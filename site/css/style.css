@@ -185,6 +185,10 @@
     margin-left: -75%;
   }
 
+  .divTextoHeader{
+    text-align:center;z-index: 999; color: white;margin-left:10%; margin-top:30vh;height: 30vh; width: 30%; position: absolute; display: flex; align-items: center; justify-content: center; background-color: rgba(140, 140, 145, 0.562); border-radius:35px;
+  }
+
 /* Sobre o projeto */
 .titulo{
   color: white;
