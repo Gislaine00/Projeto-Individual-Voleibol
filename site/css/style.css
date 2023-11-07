@@ -40,6 +40,11 @@
     background-color: #000000;
     overflow-x: hidden;
   }
+
+  ::selection{
+    background: yellow;
+    color: black;
+  }
   
   /* Navbar e logo*/
   nav {
@@ -325,7 +330,7 @@
 .animacao{
  /*  border: 1px solid green; */
   width: 30%;
-  height: 300px;
+  height: 100px;
   margin-top: 25%;
 }
 
@@ -376,6 +381,7 @@
   width: 400px;
   height: 350px;
   border-radius: 50px 0% 50px 0%;
+  box-shadow: 10px 5px 5px rgb(108, 108, 240);
 }
 
 .textinhoDev{
@@ -384,4 +390,35 @@
   font-size: 25px;
   text-align: center;
   margin-top: 10%;
+}
+
+/* footer */
+.rodape{
+  margin-top: 10%;
+  height: 15%;
+  background-color: rgb(243, 215, 88);
+}
+
+.imgCopy{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+
+.footer-img{
+  width:80px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+}
+
+.localizacao{
+  margin-top: -11%;
+  margin-left: 50%;
+  display: block;
+}
+
+.divMenu{
+  margin-left: 50%;
+  display: block;
 }
