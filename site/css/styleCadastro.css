@@ -1,0 +1,99 @@
+@font-face {
+    font-family:'minhafonte';
+    src:url("../assets/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtaooCPNLA3JC9c.ttf");
+  }
+  
+  body{
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .boxContainer{
+      text-align:center;
+      z-index: 999; 
+      margin-left:32%; 
+      margin-top:20vh;
+      height: 65vh; 
+      width: 35%; 
+     /*  background-color: rgb(47, 0, 255); */
+      border-radius:35px;
+      border: 2px solid black;
+  }
+  
+  h1{
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+  }
+  
+  .tudoLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+    
+  }
+  
+  .inputEmail, .inputSenha, .inputNome, .inputConfSenha{
+    width: 300px;
+    height: 20px;
+    background-color:  transparent;
+    margin-top: 2vh;
+  }
+  
+  .inpMostrarSenha {
+    margin-right: 80%;
+    margin-top: -1vh;
+  }
+  
+  .spanMostrarSenha {
+    margin-right: 34%;
+    margin-top: -2.9vh;
+    margin-bottom: 5%;
+  }
+  
+  .btnCancelar{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 25%;
+    height: 30px;
+    border-radius: 13px;
+    color: black;
+    border-color: yellow;
+    background-color: #ffffff;
+    transition: 0.5s;
+    cursor: pointer;
+    font-family: 'minhaFonte';
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .btnCancelar:hover{
+    background-color: yellow;
+    color: black;
+  }
+
+  .btnCadastrar{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 25%;
+    height: 30px;
+    border-radius: 13px;
+    color: black;
+    border-color: blue;
+    background-color: #ffffff;
+    transition: 0.5s;
+    cursor: pointer;
+    font-family: 'minhaFonte';
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .btnCadastrar:hover{
+    background-color: blue;
+    color: white;
+  }
+  
+  

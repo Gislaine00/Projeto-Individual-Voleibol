@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hora do vôlei | Login</title>
     <link rel="stylesheet" href="./css/styleLogin.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <div class="boxContainer">
@@ -12,10 +13,12 @@
 
         <div class="tudoLogin">
                 <input class="inputLogin" id="inputEmail" placeholder="E-mail"><br>
-                <input id="inputSenha" placeholder="Senha"><br>
+                <input class="inputSenha" id="inputSenha" placeholder="Senha" type="password"><br>
+                <input class="inpMostrarSenha" type="checkbox" onclick="mostrarSenha()"> 
+                <span class="spanMostrarSenha">Mostrar senha</span>
             
             <button class="btnEntrar" onclick="entrar()">Entrar</button><br>
-            Ainda não tem uma conta?<a href="#">Cadastre-se</a>
+            Ainda não tem uma conta?<a href="./cadastro.html">Cadastre-se</a>
         </div>
     </div>
 </body>

@@ -27,3 +27,14 @@ function proximaImg(){
 
     document.getElementById('radio'+ i).checked = true
 }
+
+/* mostrarSenha - Login */
+function mostrarSenha() {
+  var olho = document.getElementById("inputSenha");
+  if (olho.type == "password") {
+      olho.type = "text";
+  }
+  else {
+      olho.type = "password";
+  }
+}
