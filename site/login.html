@@ -5,20 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hora do vôlei | Login</title>
     <link rel="stylesheet" href="./css/styleLogin.css">
-    <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">     
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>     
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap" rel="stylesheet">
+    <script src="./script.js"></script>
 </head>
 <body>
     <div class="boxContainer">
-        <h1>LOGIN</h1>
+        <div class="fotoContainer">
+            <img class="imgLogin" src="./assets/imgs/imgLogin.jpg">
+        </div>
+        
 
         <div class="tudoLogin">
-                <input class="inputLogin" id="inputEmail" placeholder="E-mail"><br>
-                <input class="inputSenha" id="inputSenha" placeholder="Senha" type="password"><br>
+            <p class="nomeLogin">Login</p>
+            <div class="inputsLogin">
+                <label class="labelForm">E-mail:</label>
+                <input class="inputLogin" id="inputEmail"><br>
+
+                <label class="labelForm">Senha:</label>
+                <input class="inputSenha" id="inputSenha" type="password"><br>
+            </div>
+
                 <input class="inpMostrarSenha" type="checkbox" onclick="mostrarSenha()"> 
                 <span class="spanMostrarSenha">Mostrar senha</span>
             
-            <button class="btnEntrar" onclick="entrar()">Entrar</button><br>
-            Ainda não tem uma conta?<a href="./cadastro.html">Cadastre-se</a>
+            <div class="botao">
+                <button class="btnEntrar" onclick="entrar()">Entrar</button><br>
+            </div>
+            Ainda não possui uma conta?<a href="./cadastro.html" >Cadastre-se</a>
         </div>
     </div>
 </body>

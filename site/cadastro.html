@@ -3,22 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do vôlei | Cadastro</title>
-    <link rel="stylesheet" href="./css/styleCadastro.css">
-    <script src="./script.js" defer></script>
+    <title>Hora do vôlei | Login</title>
+    <link rel="stylesheet" href="./css/styleLogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">     
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>     
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap" rel="stylesheet">
+    <script src="./script.js"></script>
 </head>
 <body>
     <div class="boxContainer">
-        <h1>Cadastro</h1>
+        <div class="fotoContainer">
+            <img class="imgLogin" src="./assets/imgs/imgCad.jpg">
+        </div>
+        
 
-        <div class="tudoCadastro">
-                <input class="inputNome" id="inputNome" placeholder="nome"><br>
-                <input class="inputEmail" id="inputEmail" placeholder="E-mail"><br>
-                <input class="inputSenha" id="inputSenha" placeholder="Senha" type="password"><br>
-                <input class="inputConfSenha" id="inputConfSenha" placeholder="Confirmar Senha" type="password"><br>
+        <div class="tudoLogin">
+            <p class="nomeLogin">Login</p>
+            <div class="inputsLogin">
+                <label class="labelForm">E-mail:</label>
+                <input class="inputLogin" id="inputEmail"><br>
+
+                <label class="labelForm">Senha:</label>
+                <input class="inputSenha" id="inputSenha" type="password"><br>
+            </div>
+
+                <input class="inpMostrarSenha" type="checkbox" onclick="mostrarSenha()"> 
+                <span class="spanMostrarSenha">Mostrar senha</span>
             
-            <button class="btnCancelar" onclick="cancelar()">Cancelar</button>
-            <button class="btnCadastrar" onclick="cadastrar()">Cadastrar</button><br>
+            <div class="botao">
+                <button class="btnEntrar" onclick="entrar()">Cancelar</button><br>
+                <button class="btnEntrar" onclick="entrar()">Cadastrar</button><br>
+            </div>
+            Ainda não possui uma conta?<a href="./cadastro.html" >Cadastre-se</a>
         </div>
     </div>
 </body>

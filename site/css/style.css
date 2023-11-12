@@ -62,11 +62,13 @@
     z-index: 2;
     font-family: Cambria;
     text-transform: uppercase;
+    
   }
   
   .changeStyle {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 1em yellow;
+    
   }
     
   .logo {
@@ -190,15 +192,17 @@
     z-index: 999; 
     color: white;
     margin-left:10%; 
-    margin-top:30vh;
-    height: 30vh; 
-    width: 30%; 
+    margin-top:40vh;
+    height: 15vh; 
+    width: 40%; 
     position: absolute; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
     background-color: rgba(46, 46, 48, 0.562); 
     border-radius:35px;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
   }
 
 /* Sobre o projeto */
@@ -288,6 +292,7 @@
   width: 80%;
   height: 100%;
   backface-visibility: hidden;
+  cursor: pointer;
 }
 
 .back{
@@ -298,6 +303,8 @@
   border: 2px solid yellow;
 	transform: rotateY(180deg);
   box-shadow: 1px 3px 3px 1px yellow;
+  animation: fricker;
+  cursor: pointer;
 }
 
 .imgJogador{
@@ -310,6 +317,7 @@
 .textoJogador{
   text-align: center;
   color: white;
+  font-family: "minhafonte";
 }
 
 
@@ -422,32 +430,191 @@
 }
 
 /* footer */
-.rodape{
-  margin-top: 10%;
-  height: 15%;
-  background-color: rgb(243, 215, 88);
+section {
+  width: 100%;
+  display: inline-block;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
 }
 
-.imgCopy{
+.footer-container{
+  margin-top: 5vh;
+  background: rgb(247, 236, 86);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+  height: 35vh;
+}
+
+.footer-container .footer-left,
+.footer-container .footer-infos,
+.footer-container .footer-right{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 5px;
+}
+
+/* Footer left */
+.footer-container .footer-left{
+  width: 40%;
+  margin-left: 5px;
+}
+
+.footer-container h3{
+  color:  black;
+  font-family: "minhafonte";
+  margin: 0;
+}
+
+.footer-container h3 span{
+  color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-container .footer-links{
+  color:  black;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-container .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-container .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-container .footer-infos{
+  width: 35%;
+  margin-left: 40px;
+}
+
+.footer-container .footer-infos i{
+  background-color:  #33383b;
+  color: black;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 15px 15px;
+  vertical-align: middle;
+}
+
+.footer-container .footer-infos p{
+  display: inline-block;
+  color: black;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-container .footer-infos p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+
+.footer-container .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: black;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-container .footer-links .link-1:before {
+  content: none;
+}
+
+.divIconp{
   display: flex;
-  flex-direction: column;
-  margin-left: 10%;
+  flex-direction: row;
+  margin-top: 1px;
+  
 }
 
-.footer-img{
-  width:80px;
+.iconInfos{
+display:inline-flex;
+width: 35px;
+height: 35px;
+border-radius: 2px;
+font-size: 20px;
+color: black;
+margin-right: 3px;
+margin-bottom: 8%;
+margin-top: 3px;
+
+}
+
+.pInfos{
+  margin-top: 10px;
+  margin-left:10px;
+}
+
+/* Footer Right */
+
+.footer-container .footer-right{
+  width: 20%;
+}
+
+.footer-container .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-container .footer-company-about span{
+  display: block;
+  color:  black;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-container .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-container .footer-icons a{
+  display:inline-flex;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.logo-footer{
+  width: 70px;
   height: auto;
   border-radius: 50%;
-  display: block;
+  vertical-align: middle;
+  border: 1px solid black;
 }
 
-.localizacao{
-  margin-top: -11%;
-  margin-left: 50%;
-  display: block;
-}
-
-.divMenu{
-  margin-left: 50%;
-  display: block;
-}
