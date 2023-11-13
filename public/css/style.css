@@ -306,6 +306,7 @@
   box-shadow: 1px 3px 3px 1px yellow;
   animation: fricker;
   cursor: pointer;
+  border-radius: 10%;
 }
 
 .imgJogador{
@@ -313,6 +314,7 @@
   width: 80%;
   height: 80%;
   margin-left: 35px;
+  border-radius: 10%;
 }
 
 .textoJogador{
