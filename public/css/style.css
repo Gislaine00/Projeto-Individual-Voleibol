@@ -137,6 +137,7 @@
     margin-top: 43.7%;
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
   }
 
   .nav-manual .manual-btn, .nav-auto div{
@@ -211,7 +212,7 @@
   font-family: Cambria;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 35px;
+  margin-top: 100px;
   font-size: 35px;
 }
 
