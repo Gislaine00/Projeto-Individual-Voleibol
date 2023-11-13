@@ -5,6 +5,11 @@ body{
   font-family: "Poppins", sans-serif;
 }
 
+::selection{
+  background: yellow;
+  color: black;
+}
+
 .boxContainer{
     width: 100%;
     height: 100vh;
