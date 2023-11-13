@@ -112,5 +112,14 @@ body{
   color: white;
 }
 
+.divSeta{
+  margin-top: -5%;
+  margin-left: 150%;
+}
+
+.imgSeta{
+  cursor: pointer;
+}
+
 
 

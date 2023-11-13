@@ -18,8 +18,14 @@
         
 
         <div class="tudoCad">
+            <div class="divSeta">
+                <img onclick="voltar()" class="imgSeta" src="./assets/imgs/icons/icons8-seta-esquerda-32.png">
+            </div>
+
             <p class="nomeCad">Cadastro</p>
             <div class="inputsCad">
+                
+
                 <label class="labelForm">Nome:</label>
                 <input class="inputNome" id="inputNome"><br>
 
@@ -51,6 +57,10 @@
     }
 
     function cadastrar(){
+        window.location.href ="login.html";
+    }
+
+    function voltar(){
         window.location.href ="login.html";
     }
 </script>
