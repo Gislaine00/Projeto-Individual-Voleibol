@@ -18,7 +18,7 @@ body{
 }
 
 .nomeLogin{
-  font-family: poppins;
+  font-family: Poppins;
   text-align: center;
   color: black;
   font-weight: bold;
@@ -63,12 +63,12 @@ body{
   font-size: 18px;
 }
 
-.inputLogin:hover{
-  box-shadow: 3px 0px 3px 0px yellow;
+.inputLogin:focus{
+  box-shadow: 3px 2px 0px 0px yellow;
 }
 
-.inputSenha:hover{
-  box-shadow: 3px 0px 3px 0px yellow;
+.inputSenha:focus{
+  box-shadow: 3px 2px 0px 0px yellow;
 }
 
 .inpMostrarSenha {
@@ -99,6 +99,7 @@ body{
   font-family: 'minhaFonte';
   font-weight: bold;
   font-size: 18px;
+  box-shadow: 3px 3px 0px 0px rgb(216, 250, 255);
 }
 
 .btnEntrar:hover{
