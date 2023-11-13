@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do vôlei | Login</title>
-    <link rel="stylesheet" href="./css/styleLogin.css">
+    <title>Hora do vôlei | Cadastro</title>
+    <link rel="stylesheet" href="./css/styleCadastro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">     
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap" rel="stylesheet">
@@ -13,15 +13,21 @@
 <body>
     <div class="boxContainer">
         <div class="fotoContainer">
-            <img class="imgLogin" src="./assets/imgs/imgCad.jpg">
+            <img class="imgCad" src="./assets/imgs/imgCad.jpg">
         </div>
         
 
-        <div class="tudoLogin">
-            <p class="nomeLogin">Login</p>
-            <div class="inputsLogin">
+        <div class="tudoCad">
+            <p class="nomeCad">Cadastro</p>
+            <div class="inputsCad">
+                <label class="labelForm">Nome:</label>
+                <input class="inputNome" id="inputNome"><br>
+
+                <label class="labelForm">Estado:</label>
+                <input class="inputEstado" id="inputEstado"><br>
+
                 <label class="labelForm">E-mail:</label>
-                <input class="inputLogin" id="inputEmail"><br>
+                <input class="inputCad" id="inputEmail"><br>
 
                 <label class="labelForm">Senha:</label>
                 <input class="inputSenha" id="inputSenha" type="password"><br>
@@ -31,10 +37,9 @@
                 <span class="spanMostrarSenha">Mostrar senha</span>
             
             <div class="botao">
-                <button class="btnEntrar" onclick="entrar()">Cancelar</button><br>
-                <button class="btnEntrar" onclick="entrar()">Cadastrar</button><br>
+                <button class="btnCancelar" onclick="cancelar()">Cancelar</button><br>
+                <button class="btnCadastrar" onclick="cadastrar()">Cadastrar</button><br>
             </div>
-            Ainda não possui uma conta?<a href="./cadastro.html" >Cadastre-se</a>
         </div>
     </div>
 </body>
