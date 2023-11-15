@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Vôlei | Home interno</title>
+    <link rel="stylesheet" href="./css/styleInterno.css">
+</head>
+<body>
+    <div class="logo">
+        <img id="idLogo" src="./assets/imgs/logoVolei.png" alt="logo" class="logo-img">
+        <p class="nomeProjeto">Hora do Vôlei</p>
+    </div>
+
+    <div class="botoes">
+        <div class="btnLeft">
+            <button onclick="quiz()"class="btnQuiz">Quiz</button>
+            <button onclick="mulheres()" class="btnMulheres">Mulheres</button>
+        </div>
+
+        <div class="btnRight">
+            <button onclick="sair()"class="btnSair">Sair</button>
+            <button onclick="homens()" class="btnHomens">Homens</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function quiz(){
+        window.location.href = "quiz.html"
+    }
+</script>

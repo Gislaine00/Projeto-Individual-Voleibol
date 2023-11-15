@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.nomeProjeto{
+    color: white;
+}
+
+.botoes{
+    height: 87vh;
+}
+
+.btnLeft{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 70px;
+    width: 40%;
+}
+
+.btnRight{
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+    align-items:flex-end; 
+    margin-top: 20px;
+    margin-top: -37.8%;
+}
+
+
+.btnQuiz, .btnMulheres, .btnSair, .btnHomens{
+    height: 40vh;
+    width: 500px; 
+    border-radius: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.btnQuiz:hover{
+    border: 2px solid yellow;
+    transition: 200ms linear;
+}
+
+.btnMulheres:hover{
+    border: 2px solid yellow;
+    transition: 200ms linear;
+}
+
+.btnSair:hover{
+    border: 2px solid yellow;
+    transition: 200ms linear;
+}
+
+.btnHomens:hover{
+    border: 2px solid yellow;
+    transition: 200ms linear;
+}

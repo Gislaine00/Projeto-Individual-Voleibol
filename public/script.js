@@ -38,3 +38,5 @@ function proximaImg(){
       olho.type = "password";
   }
 } */
+
+/* QUIZ */

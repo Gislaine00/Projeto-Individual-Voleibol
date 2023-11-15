@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.nomeProjeto{
+    color: white;
+}
+
+.container{
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid blue;
+    height: 80vh;
+    width: 70%;
+    margin: auto;
+    margin-top: 15px;
+}

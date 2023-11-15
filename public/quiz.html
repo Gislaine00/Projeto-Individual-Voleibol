@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Vôlei | Quiz</title>
+    <link rel="stylesheet" href="./css/styleQuiz.css">
+</head>
+<body>
+    <div class="logo">
+        <img id="idLogo" src="./assets/imgs/logoVolei.png" alt="logo" class="logo-img">
+        <p class="nomeProjeto">Hora do Vôlei</p>
+    </div>
+
+    <div class="container">
+        <div class="divPergunta1" id="divPergunta1" style="display:block">
+            <p>1- Em que país foi criado o voleibol?</p>
+            <input type="radio" class="alternativaA" id="alternativaA1" onclick="aparecer1A()">Alemanha<br>
+            <input type="radio" class="alternativaB" id="alternativaB1" onclick="aparecer1B()">Brasil<br>
+            <input type="radio" class="alternativaC" id="alternativaC1" onclick="aparecer1C()">França<br>
+            <input type="radio" class="alternativaD" id="alternativaD1" onclick="aparecer1D()">Estados Unidos<br>
+            <button onclick="proxima2()">Próxima</button>
+        </div>
+
+        <div class="divPergunta2" id="divPergunta2" style="display:none">
+            <p>2- Qual o tamanho da quadra de vôlei?</p>
+            <input type="radio" class="alternativaA" id="alternativaA2">15x9<br>
+            <input type="radio" class="alternativaB" id="alternativaB2">18x9<br>
+            <input type="radio" class="alternativaC" id="alternativaC2">15x6<br>
+            <input type="radio" class="alternativaD" id="alternativaD2">18x6<br>
+            <button onclick="proxima3()">Próxima</button>
+        </div>
+
+        <div class="divPergunta3" id="divPergunta3" style="display:none">
+            <p>3- Quando é comemorado oficialmente o dia nacional do voleibol?</p>
+            <input type="radio" class="alternativaA" id="alternativaA3">30 agosto<br>
+            <input type="radio" class="alternativaB" id="alternativaB3">27 de agosto<br>
+            <input type="radio" class="alternativaC" id="alternativaC3">27 de junho<br>
+            <input type="radio" class="alternativaD" id="alternativaD3">30 de junho<br>
+            <button onclick="proxima4()">Próxima</button>
+        </div>
+
+        <!-- <div class="divPergunta4" id="divPergunta4" style="display:none">
+            <p>4- Em quantas Olimpíadas consecutivas a Seleção Masculina de Vôlei conquistou medalhas?</p>
+            <input type="radio" class="alternativaA" id="alternativaA4">2<br>
+            <input type="radio" class="alternativaB" id="alternativaB4">3<br>
+            <input type="radio" class="alternativaC" id="alternativaC4">4<br>
+            <input type="radio" class="alternativaD" id="alternativaD4">5<br>
+            <button onclick="proxima5()">Próxima</button>
+        </div>
+
+        <div class="divPergunta5" id="divPergunta5" style="display:none">
+            <p>5- Quem é a jogadora brasileira com mais participações em Olimpíadas pela Seleção Feminina?</p>
+            <input type="radio" class="alternativaA" id="alternativaA5">Fofão<br>
+            <input type="radio" class="alternativaB" id="alternativaB5">Fabiana Claudino<br>
+            <input type="radio" class="alternativaC" id="alternativaC5">Sheilla<br>
+            <input type="radio" class="alternativaD" id="alternativaD5">Jaqueline<br>
+            <button onclick="proxima6()">Próxima</button>
+        </div> -->
+    </div>
+</body>
+</html>
+
+<script>
+    function aparecer1A() {
+        if(alternativaA1.style.display == "block"){
+            alternativaA1.style.display = 'none'
+        }else{
+            alternativaA1.style.display = "block"
+        }
+    }
+
+    function proxima2(){
+        divPergunta1.style.display="none";
+        divPergunta2.style.display="block";
+    }
+
+    function proxima3(){
+        divPergunta2.style.display="none";
+        divPergunta3.style.display="block";
+    }
+
+    function proxima4(){
+        divPergunta3.style.display="none";
+        divPergunta4.style.display="block";
+    }
+
+    /* function proxima5(){
+        divPergunta4.style.display="none";
+        divPergunta5.style.display="block";
+    }
+
+    function proxima6(){
+        divPergunta5.style.display="none";
+        divPergunta6.style.display="block";
+    } */
+
+
+</script>
