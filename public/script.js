@@ -29,7 +29,7 @@ function proximaImg(){
 }
 
 /* mostrarSenha - Login */
-/* function mostrarSenha() {
+function mostrarSenha() {
   var olho = document.getElementById("inputSenha");
   if (olho.type == "password") {
       olho.type = "text";
@@ -37,6 +37,6 @@ function proximaImg(){
   else {
       olho.type = "password";
   }
-} */
+}
 
 /* QUIZ */

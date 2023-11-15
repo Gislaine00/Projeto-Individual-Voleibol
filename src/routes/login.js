@@ -1,13 +1,13 @@
 var express = require("express");
 var router = express.Router();
 
-var avisoController = require("../controllers/avisoController");
+var loginController = require("../controllers/loginController");
 
-router.get("/listar", function (req, res) {
-    avisoController.listar(req, res);
+router.get("/entrar", function (req, res) {
+    loginController.entrar(req, res);
 });
 
-router.get("/listar/:idUsuario", function (req, res) {
+/* router.get("/listar/:idUsuario", function (req, res) {
     avisoController.listarPorUsuario(req, res);
 });
 
@@ -25,6 +25,6 @@ router.put("/editar/:idAviso", function (req, res) {
 
 router.delete("/deletar/:idAviso", function (req, res) {
     avisoController.deletar(req, res);
-});
+}); */
 
 module.exports = router;
