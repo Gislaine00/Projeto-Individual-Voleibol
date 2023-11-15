@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">     
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap" rel="stylesheet">
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
 </head>
 <body>
     <div class="boxContainer">
@@ -29,9 +29,6 @@
                 <label class="labelForm">Nome:</label>
                 <input class="inputNome" id="inputNome"><br>
 
-                <label class="labelForm">Estado:</label>
-                <input class="inputEstado" id="inputEstado"><br>
-
                 <label class="labelForm">E-mail:</label>
                 <input class="inputCad" id="inputEmail"><br>
 
@@ -39,9 +36,9 @@
                 <input class="inputSenha" id="inputSenha" type="password"><br>
             </div>
 
-                <input class="inpMostrarSenha" type="checkbox" onclick="mostrarSenha()"> 
+                <!-- <input class="inpMostrarSenha" type="checkbox" onclick="mostrarSenha()"> 
                 <span class="spanMostrarSenha">Mostrar senha</span>
-            
+             -->
             <div class="botao">
                 <button class="btnCancelar" onclick="cancelar()">Cancelar</button><br>
                 <button class="btnCadastrar" onclick="cadastrar()">Cadastrar</button><br>
@@ -57,8 +54,59 @@
     }
 
     function cadastrar(){
-        window.location.href ="login.html";
+        
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = inputNome.value;
+    var emailVar = inputEmail.value;
+    var senhaVar = inputSenha.value;
+
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" 
+    ) {
+        alert("ERRO")
+
+      return false;
+    } else {
+      setInterval(5000);
     }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          setTimeout(() => {
+            window.location.href ="login.html";
+          }, "2000");
+
+ 
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+
+      });
+
+    return false;
+  }
 
     function voltar(){
         window.location.href ="login.html";

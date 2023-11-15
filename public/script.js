@@ -13,7 +13,7 @@ window.addEventListener('scroll', function () {
 /* carrossel */
 var radio = document.querySelector('.manual-btn')
 var i = 1
-document.getElementById('radio1').checked = true
+/* document.getElementById('radio1').checked = true; */
 
 setInterval(() => {
     proximaImg()
@@ -29,7 +29,7 @@ function proximaImg(){
 }
 
 /* mostrarSenha - Login */
-function mostrarSenha() {
+/* function mostrarSenha() {
   var olho = document.getElementById("inputSenha");
   if (olho.type == "password") {
       olho.type = "text";
@@ -37,4 +37,4 @@ function mostrarSenha() {
   else {
       olho.type = "password";
   }
-}
+} */
