@@ -46,3 +46,12 @@ body {
     color: white;
     text-align: center;
 }
+
+.divSeta{
+    margin-top: -3%;
+    margin-left: 1250px;
+  }
+
+.imgSeta{
+    cursor: pointer;
+}

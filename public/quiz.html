@@ -12,152 +12,226 @@
         <p class="nomeProjeto">Hora do Vôlei</p>
     </div>
 
-    <div class="container">
+    <div class="divSeta">
+        <img onclick="voltar()" class="imgSeta" src="./assets/imgs/icons/setaEsquerdaBranco.png">
+    </div>
+
+    <div class="container" id="container">
+
         <h1 style="margin: auto; text-align: center; text-decoration: underline;">Quiz</h1>
         <div class="divPergunta" id="divPergunta1">
-            <p>1- Em que país foi criado o voleibol?</p>
+            <p><span class="corNumV">1-</span> Em que país foi criado o voleibol?</p>
             <div class="divRadios">
-                <input type="radio" class="alternativa1" id="alternativaA1" value="1" name="resposta1">Alemanha<br>
-                <input type="radio" class="alternativa1" id="alternativaB1" value="2" name="resposta1">Brasil<br>
-                <input type="radio" class="alternativa1" id="alternativaC1" value="3" name="resposta1">França<br>
-                <input type="radio" class="alternativa1" id="alternativaD1" value="4" name="resposta1">Estados Unidos<br>
+                <input type="radio" class="alternativa1" id="alternativa" value="1" name="resposta1">Alemanha<br>
+                <input type="radio" class="alternativa1" id="alternativa" value="2" name="resposta1">Brasil<br>
+                <input type="radio" class="alternativa1" id="alternativa" value="3" name="resposta1">França<br>
+                <input type="radio" class="alternativa1" id="alternativa" value="4" name="resposta1">Estados Unidos<br>
             </div>
         </div>
 
         <div class="divPergunta" id="divPergunta2">
-            <p>2- Qual o tamanho da quadra de vôlei?</p>
+            <p><span class="corNumA">2-</span> Qual o tamanho da quadra de vôlei?</p>
             <div class="divRadios">
-                <input type="radio" class="alternativa" id="alternativaA2" value="5" name="resposta2">15x9<br>
-                <input type="radio" class="alternativa" id="alternativaB2" value="6" name="resposta2">18x9<br>
-                <input type="radio" class="alternativa" id="alternativaC2" value="7" name="resposta2">15x6<br>
-                <input type="radio" class="alternativa" id="alternativaD2" value="8" name="resposta2">18x6<br>
+                <input type="radio" class="alternativa" id="alternativaA2" value="1" name="resposta2">15x9<br>
+                <input type="radio" class="alternativa" id="alternativaB2" value="2" name="resposta2">18x9<br>
+                <input type="radio" class="alternativa" id="alternativaC2" value="3" name="resposta2">15x6<br>
+                <input type="radio" class="alternativa" id="alternativaD2" value="4" name="resposta2">18x6<br>
             </div>
         </div>
 
         <div class="divPergunta" id="divPergunta3">
-            <p>3- Quando é comemorado oficialmente o dia nacional do voleibol?</p>
+            <p><span class="corNumV">3-</span> Quando é comemorado oficialmente o dia nacional do voleibol?</p>
             <div class="divRadios">
-                <input type="radio" class="alternativa" id="alternativaA3" value="9" name="resposta3">30 agosto<br>
-                <input type="radio" class="alternativa" id="alternativaB3" value="10" name="resposta3">27 de agosto<br>
-                <input type="radio" class="alternativa" id="alternativaC3" value="11" name="resposta3">27 de junho<br>
-                <input type="radio" class="alternativa" id="alternativaD3" value="12" name="resposta3">30 de junho<br>
+                <input type="radio" class="alternativa" id="alternativaA3" value="1" name="resposta3">30 agosto<br>
+                <input type="radio" class="alternativa" id="alternativaB3" value="2" name="resposta3">27 de agosto<br>
+                <input type="radio" class="alternativa" id="alternativaC3" value="3" name="resposta3">27 de junho<br>
+                <input type="radio" class="alternativa" id="alternativaD3" value="4" name="resposta3">30 de junho<br>
             </div>
             </div>
         
         <div class="divPergunta" id="divPergunta4">
-            <p>4- Em quantas Olimpíadas consecutivas a Seleção Masculina de Vôlei conquistou medalhas?</p>
+            <p><span class="corNumA">4-</span> Em quantas Olimpíadas consecutivas a Seleção Masculina de Vôlei conquistou medalhas?</p>
             <div class="divRadios">
-                <input type="radio" class="alternativa" id="alternativaA4" value="13" name="resposta4">2<br>
-                <input type="radio" class="alternativa" id="alternativaB4" value="14" name="resposta4">3<br>
-                <input type="radio" class="alternativa" id="alternativaC4" value="15" name="resposta4">4<br>
-                <input type="radio" class="alternativa" id="alternativaD4" value="16" name="resposta4">5<br>
+                <input type="radio" class="alternativa" id="alternativaA4" value="1" name="resposta4">2<br>
+                <input type="radio" class="alternativa" id="alternativaB4" value="2" name="resposta4">3<br>
+                <input type="radio" class="alternativa" id="alternativaC4" value="3" name="resposta4">4<br>
+                <input type="radio" class="alternativa" id="alternativaD4" value="4" name="resposta4">5<br>
             </div>
         </div>
 
         <div class="divPergunta" id="divPergunta5">
-            <p>5- Quem é a jogadora brasileira com mais participações em Olimpíadas pela Seleção Feminina?</p>
+            <p><span class="corNumV">5-</span> Quem é a jogadora brasileira com mais participações em Olimpíadas pela Seleção Feminina?</p>
             <div class="divRadios">
-                <input type="radio" class="alternativa" id="alternativaA5" value="17" name="resposta3">Fofão<br>
-                <input type="radio" class="alternativa" id="alternativaB5" value="18" name="resposta3">Fabiana Claudino<br>
-                <input type="radio" class="alternativa" id="alternativaC5" value="19" name="resposta3">Sheilla<br>
-                <input type="radio" class="alternativa" id="alternativaD5" value="20" name="resposta3">Jaqueline<br>
+                <input type="radio" class="alternativa" id="alternativaA5" value="1" name="resposta5">Fofão<br>
+                <input type="radio" class="alternativa" id="alternativaB5" value="2" name="resposta5">Fabiana Claudino<br>
+                <input type="radio" class="alternativa" id="alternativaC5" value="3" name="resposta5">Sheilla<br>
+                <input type="radio" class="alternativa" id="alternativaD5" value="4" name="resposta5">Jaqueline<br>
             </div>
         </div>
 
         <div class="divPergunta" id="divPergunta6">
-            <p>6- Qual o atual técnico do vôlei masculino?</p>
+            <p><span class="corNumA">6-</span> Qual o atual técnico do vôlei masculino?</p>
             <div class="divRadios">
-                <input type="radio" class="alternativa" id="alternativaA5" value="21" name="resposta3">Antônio Carlos Zigotto<br>
-                <input type="radio" class="alternativa" id="alternativaB5" value="22" name="resposta3">Luísa Machado Kopp<br>
-                <input type="radio" class="alternativa" id="alternativaC5" value="23" name="resposta3">Bernadinho<br>
-                <input type="radio" class="alternativa" id="alternativaD5" value="24" name="resposta3">Renan Dal Zotto<br>
+                <input type="radio" class="alternativa" id="alternativaA5" value="1" name="resposta6">Antônio Carlos Zigotto<br>
+                <input type="radio" class="alternativa" id="alternativaB5" value="2" name="resposta6">Luísa Machado Kopp<br>
+                <input type="radio" class="alternativa" id="alternativaC5" value="3" name="resposta6">Bernadinho<br>
+                <input type="radio" class="alternativa" id="alternativaD5" value="4" name="resposta6">Renan Dal Zotto<br>
             </div>
         </div>
 
         <div class="divPergunta" id="divPergunta7">
-            <p>7- Qual o atual técnico do vôlei feminino?</p>
+            <p><span class="corNumV">7-</span> Qual o atual técnico do vôlei feminino?</p>
             <div class="divRadios">
-                <input type="radio" class="alternativa" id="alternativaA5" value="25" name="resposta3">Renan Dal Zotto<br>
-                <input type="radio" class="alternativa" id="alternativaB5" value="26" name="resposta3">Bernadinho<br>
-                <input type="radio" class="alternativa" id="alternativaC5" value="27" name="resposta3">José Roberto Guimarães<br>
-                <input type="radio" class="alternativa" id="alternativaD5" value="28" name="resposta3"> Jaqueline Silva<br>
+                <input type="radio" class="alternativa" id="alternativaA5" value="1" name="resposta7">Renan Dal Zotto<br>
+                <input type="radio" class="alternativa" id="alternativaB5" value="2" name="resposta7">Bernadinho<br>
+                <input type="radio" class="alternativa" id="alternativaC5" value="3" name="resposta7">José Roberto Guimarães<br>
+                <input type="radio" class="alternativa" id="alternativaD5" value="4" name="resposta7"> Jaqueline Silva<br>
             </div>
         </div>
 
         <div class="divPergunta" id="divPergunta8">
-            <p>8- Quantas substituições uma equipe pode fazer durante um set em uma partida de vôlei?</p>
+            <p><span class="corNumA">8-</span> Quantas substituições uma equipe pode fazer durante um set em uma partida de vôlei?</p>
             <div class="divRadios">
-                <input type="radio" class="alternativa" id="alternativaA5" value="29" name="resposta3">Duas<br>
-                <input type="radio" class="alternativa" id="alternativaB5" value="30" name="resposta3">Quatro<br>
-                <input type="radio" class="alternativa" id="alternativaC5" value="31" name="resposta3">Cinco<br>
-                <input type="radio" class="alternativa" id="alternativaD5" value="32" name="resposta3">Três<br>
+                <input type="radio" class="alternativa" id="alternativaA5" value="1" name="resposta8">Duas<br>
+                <input type="radio" class="alternativa" id="alternativaB5" value="2" name="resposta8">Quatro<br>
+                <input type="radio" class="alternativa" id="alternativaC5" value="3" name="resposta8">Cinco<br>
+                <input type="radio" class="alternativa" id="alternativaD5" value="4" name="resposta8">Três<br>
             </div>
         </div>
 
         <div class="divPergunta" id="divPergunta9">
-            <p>9- Se a bola toca na linha da quadra durante uma jogada, qual é a decisão do árbitro?</p>
+            <p><span class="corNumV">9-</span> Se a bola toca na linha da quadra durante uma jogada, qual é a decisão do árbitro?</p>
             <div class="divRadios">
-                <input type="radio" class="alternativaA" id="alternativaA5">A bola é considerada dentro<br>
-                <input type="radio" class="alternativaB" id="alternativaB5">Manda refazer a jogada<br>
-                <input type="radio" class="alternativaC" id="alternativaC5">Sempre considera fora<br>
-                <input type="radio" class="alternativaD" id="alternativaD5">Depende da opinião dos jogadores<br>
+                <input type="radio" class="alternativa" id="alternativaA5" value="1" name="resposta9">A bola é considerada dentro<br>
+                <input type="radio" class="alternativa" id="alternativaB5" value="2" name="resposta9">Manda refazer a jogada<br>
+                <input type="radio" class="alternativa" id="alternativaC5" value="3" name="resposta9">Sempre considera fora<br>
+                <input type="radio" class="alternativa" id="alternativaD5" value="4" name="resposta9">Depende da opinião dos jogadores<br>
             </div>
         </div>
 
         <div class="divPergunta" id="divPergunta10">
-            <p>10-  Em que ano a seleção brasileira de vôlei feminino conquistou seu primeiro título no Campeonato Mundial?</p>
+            <p><span class="corNumA">10-</span>  Em que ano a seleção brasileira de vôlei feminino conquistou seu primeiro título no Campeonato Mundial?</p>
             <div class="divRadios">
-                <input type="radio" class="alternativaA" id="alternativaA5">1994<br>
-                <input type="radio" class="alternativaB" id="alternativaB5">1998<br>
-                <input type="radio" class="alternativaC" id="alternativaC5">2002<br>
-                <input type="radio" class="alternativaD" id="alternativaD5">2006<br>
+                <input type="radio" class="alternativa" id="alternativaA5" value="1" name="resposta10">1994<br>
+                <input type="radio" class="alternativa" id="alternativaB5" value="2" name="resposta10">1998<br>
+                <input type="radio" class="alternativa" id="alternativaC5" value="3" name="resposta10">2002<br>
+                <input type="radio" class="alternativa" id="alternativaD5" value="4" name="resposta10">2006<br>
             </div>
         </div>
 
-        <button onclick="finalizar()">Finalizar</button>
+        <button onclick="finalizar()" class="btnFinalizar">Finalizar</button>
             <div id="exibir"></div>
     </div>
+
+    <div class="container2" id="container2" style="display: none;"></div>
 </body>
 </html>
 
-<script>
+<script> 
+
+    function voltar(){
+        window.location.href = "interno.html"
+    }
+
+    var listaAcertos = 0;
+    var listaErros = 0;
     function finalizar() {
     var opcoes1 = document.getElementsByName('resposta1');
     var opcoes2 = document.getElementsByName('resposta2');
     var opcoes3 = document.getElementsByName('resposta3');
+    var opcoes4 = document.getElementsByName('resposta4');
+    var opcoes5 = document.getElementsByName('resposta5');
+    var opcoes6 = document.getElementsByName('resposta6');
+    var opcoes7 = document.getElementsByName('resposta7');
+    var opcoes8 = document.getElementsByName('resposta8');
+    var opcoes9 = document.getElementsByName('resposta9');
+    var opcoes10 = document.getElementsByName('resposta10');
 
-    var opcoes = [].concat(Array.from(opcoes1), Array.from(opcoes2), Array.from(opcoes3));
 
-    var listaAcertos = 0;
-    var listaErros = 0;
+    var opcoes = [].concat(Array.from(opcoes1), Array.from(opcoes2), Array.from(opcoes3), Array.from(opcoes4), Array.from(opcoes5), Array.from(opcoes6), Array.from(opcoes7),Array.from(opcoes8), Array.from(opcoes9), Array.from(opcoes10));
 
-    for (var i = 0; i < opcoes.length; i++) {
-        if (opcoes[i].checked) {
-            var alternativaSelecionada = parseInt(opcoes[i].value);
+   
+    var listaPerguntasCertas=[];
 
-            if (opcoes[i].name === 'resposta1') {
-                if (alternativaSelecionada === 4) {
-                    listaAcertos += 1;
-                } else {
-                    listaErros += 1;
+        for (var i = 0; i < opcoes.length; i++) {
+            if (opcoes[i].checked) {
+                var alternativaSelecionada = parseInt(opcoes[i].value);
+
+                if (opcoes[i].name === 'resposta1') {
+                    if (alternativaSelecionada === 4) {
+                        listaAcertos += 1;
+                    } else {
+                        listaErros += 1;
+                    }
+                } else if (opcoes[i].name === 'resposta2') {
+                    if (alternativaSelecionada === 2) {
+                        listaAcertos += 1;
+                    } else {
+                        listaErros += 1;
+                    }
+                } else if (opcoes[i].name === 'resposta3') {
+                    if (alternativaSelecionada === 3) {
+                        listaAcertos += 1;
+                    } else {
+                        listaErros += 1;
+                    }
+                } else if (opcoes[i].name === 'resposta4') {
+                    if (alternativaSelecionada === 3) {
+                        listaAcertos += 1;
+                    } else {
+                        listaErros += 1;
+                    }
+                } else if (opcoes[i].name === 'resposta5') {
+                    if (alternativaSelecionada === 1) {
+                        listaAcertos += 1;
+                    } else {
+                        listaErros += 1;
+                    }
+                } else if (opcoes[i].name === 'resposta6') {
+                    if (alternativaSelecionada === 4) {
+                        listaAcertos += 1;
+                    } else {
+                        listaErros += 1;
+                    }
+                } else if (opcoes[i].name === 'resposta7') {
+                    if (alternativaSelecionada === 3) {
+                        listaAcertos += 1;
+                    } else {
+                        listaErros += 1;
+                    }
+                } else if (opcoes[i].name === 'resposta8') {
+                    if (alternativaSelecionada === 2) {
+                        listaAcertos += 1;
+                    } else {
+                        listaErros += 1;
+                    }
+                } else if (opcoes[i].name === 'resposta9') {
+                    if (alternativaSelecionada === 1) {
+                        listaAcertos += 1;
+                    } else {
+                        listaErros += 1;
+                    }
+                } else if (opcoes[i].name === 'resposta10') {
+                    if (alternativaSelecionada === 2) {
+                        listaAcertos += 1;
+                    } else {
+                        listaErros += 1;
+                    }
                 }
-            } else if (opcoes[i].name === 'resposta2') {
-                if (alternativaSelecionada === 6) {
-                    listaAcertos += 1;
-                } else {
-                    listaErros += 1;
-                }
-            } else if (opcoes[i].name === 'resposta3') {
-                if (alternativaSelecionada === 11) {
-                    listaAcertos += 1;
-                } else {
-                    listaErros += 1;
-                }
-            }
-
-            exibir.innerHTML = `Acertos: ${listaAcertos}<br> Erros:${listaErros}`;
+                
+            }   
+            exibir.innerHTML = `<span style="display:flex; text-align: center; align-items: center;">Acertos: ${listaAcertos/10*100}% <br>Erros:${listaErros/10*100}%</span>`;
         }
+       /*  mostrarGraficos(); */
     }
-}
+
+    /* function mostrarGraficos(){
+        document.getElementById("container").style.display="none";
+        document.getElementById("container2").style.display="block";
+        exibir.innerHTML = `<span style="position:absolute; color:black">Acertos: ${listaAcertos/10*100}% <br> Erros:${listaErros/10*100}%</span>`;
+    } */
+            
+
+
 
 </script>

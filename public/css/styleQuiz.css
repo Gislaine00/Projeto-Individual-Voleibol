@@ -15,6 +15,7 @@ body {
     flex-direction: row;
     font-weight: 800;
     font-size: 20px;
+    width: 50%;
 }
 
 .logo-img {
@@ -32,7 +33,7 @@ body {
     background-color: white;
     border-radius: 20px;
     border: 2px solid blue;
-    height: 200vh;
+    height: 230vh;
     width: 70%;
     margin: auto;
     margin-top: 5px;
@@ -54,6 +55,58 @@ body {
     font-size: 15px;
     flex-direction: row;
 }
+
+.btnFinalizar{
+    margin-top: 15px;
+    width: 25%;
+    height: 30px;
+    border-radius: 13px;
+    margin-left: 37%;
+    color: black;
+    border-color: blue;
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    font-family: 'minhaFonte';
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+.corNumA{
+    color: blue;
+    font-weight: bold;
+}
+
+.corNumV{
+    color: rgb(0, 211, 0);
+    font-weight: bold;
+}
+
+.btnFinalizar:hover{
+    background-color: blue;
+    color: white;
+}
+
+.container2{
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid blue;
+    height: 80vh;
+    width: 70%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.divSeta{
+    margin-top: -3%;
+    margin-left: 1250px;
+  }
+
+.imgSeta{
+    cursor: pointer;
+}
+
+
 
 
 
