@@ -1,7 +1,13 @@
+@font-face {
+    font-family:'minhafonte';
+    src:url("../assets/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtaooCPNLA3JC9c.ttf");
+  }
+
 body {
     margin: 0;
     background-color: #000000;
     overflow-x: hidden;
+    font-family: "minhafonte";
 }
 .logo {
     display: flex;
@@ -42,6 +48,13 @@ body {
     margin-top: -37.8%;
 }
 
+.btnQuiz, .btnHomens{
+    background-color: rgb(247, 247, 134);
+}
+
+.btnSair, .btnMulheres{
+    background-color: rgb(147, 247, 134);
+}
 
 .btnQuiz, .btnMulheres, .btnSair, .btnHomens{
     height: 40vh;
@@ -52,21 +65,34 @@ body {
 }
 
 .btnQuiz:hover{
+    background-color: yellow;
     border: 2px solid yellow;
     transition: 200ms linear;
 }
 
 .btnMulheres:hover{
-    border: 2px solid yellow;
+    background-color: rgb(0, 214, 0);
+    border: 2px solid rgb(0, 214, 0);
     transition: 200ms linear;
 }
 
 .btnSair:hover{
-    border: 2px solid yellow;
+    background-color: rgb(0, 214, 0);
+    border: 2px solid rgb(0, 214, 0);
     transition: 200ms linear;
 }
 
 .btnHomens:hover{
+    background-color: yellow;
     border: 2px solid yellow;
     transition: 200ms linear;
+}
+
+.fraseBtn{
+    font-size: 20px;
+}
+
+.divBotaoIcon{
+    display: flex;
+    flex-direction: column;
 }

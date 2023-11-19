@@ -1,0 +1,48 @@
+@font-face {
+    font-family:'minhafonte';
+    src:url("../assets/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtaooCPNLA3JC9c.ttf");
+  }
+
+body {
+    margin: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.nomeProjeto{
+    color: white;
+}
+
+.container{
+    height: 90vh;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.divTextinho{
+    width: 70%;
+    font-family: "minhafonte";
+}
+
+.textinho{
+    color: white;
+    text-align: center;
+}

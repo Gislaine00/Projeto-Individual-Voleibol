@@ -14,13 +14,25 @@
 
     <div class="botoes">
         <div class="btnLeft">
-            <button onclick="quiz()"class="btnQuiz">Quiz</button>
             <button onclick="mulheres()" class="btnMulheres">Mulheres</button>
+            
+            <div id="divBotaoIcon">
+                <button onclick="quiz()"class="btnQuiz">
+                    <img src="./assets/imgs/icons/quiz (2).png">
+                    <p class="fraseBtn">Quiz</p>
+                </button>
+            </div>
         </div>
 
         <div class="btnRight">
-            <button onclick="sair()"class="btnSair">Sair</button>
             <button onclick="homens()" class="btnHomens">Homens</button>
+
+            <div id="divBotaoIcon">
+                <button onclick="sair()"class="btnSair">
+                    <img src="./assets/imgs/icons/sair.png" style="height: 75px;">
+                    <p class="fraseBtn">Sair</p>
+                </button>
+            </div>
         </div>
     </div>
 </body>
@@ -30,5 +42,9 @@
     var nick = JSON.parse(sessionStorage.NICKNAME);
     function quiz(){
         window.location.href = "quiz.html"
+    }
+
+    function mulheres(){
+        window.location.href = "mulheres.html"
     }
 </script>
