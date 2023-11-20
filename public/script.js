@@ -39,6 +39,16 @@ function mostrarSenha() {
   }
 }
 
+function mostrarSenha2() {
+  var olho = document.getElementById("inputSenha2");
+  if (olho.type == "password") {
+      olho.type = "text";
+  }
+  else {
+      olho.type = "password";
+  }
+}
+
 /* QUIZ */
 function btnQuiz(){
   window.location.href = "login.html"
