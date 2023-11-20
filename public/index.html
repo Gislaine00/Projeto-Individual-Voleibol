@@ -24,9 +24,9 @@
             <ul class="nav-itens">
                 <li><a href="#nav_manual" class="itensDaNav">Projeto</a></li>
                 <li><a href="#idHistoria" class="itensDaNav">História</a></li>
-                <li><a href="#" class="itensDaNav">Jogadores</a></li>
-                <li><a href="#" class="itensDaNav">Quiz</a></li>
-                <li><a href="#" class="itensDaNav">Sobre mim</a></li>
+                <li><a href="#idJogadores" class="itensDaNav">Jogadores</a></li>
+                <li><a href="#idQuiz" class="itensDaNav">Quiz</a></li>
+                <li><a href="#idSobreMim" class="itensDaNav">Sobre mim</a></li>
                 <li><a href="./login.html" class="itensDaNav">Login</a></li>
             </ul>
         </div>
@@ -89,6 +89,7 @@
             </div>
         </section>
 
+        <hr style="border: 2px solid black;" id="idHistoria">
         <h3 class="titulo">Voleibol</h3>
         <div class="imgTexto">
             
@@ -101,6 +102,8 @@
             </div>
            <img  class="imgHist" src="./assets/imgs/imgBolaVolei.png">
         </div>
+
+        <hr style="border: 2px solid black;" id="idJogadores">
             <h3 class="titulo">Jogadores</h3>
             <div class="divTudoJogador">
             <div class="jogador-container">
@@ -203,6 +206,7 @@
         </div>
 
             <br><br>
+            <hr style="border: 2px solid black;" id="idQuiz">
                 <h3 class="titulo">Quiz interativo</h3>
                 <div class="textoAniQuiz">
                     <div class="animacao">
@@ -212,7 +216,7 @@
                     </div>
                     <div class="textoQuiz">
                         <p class="textinhoQuiz">O quiz do Hora do Vôlei é uma maneira divertida e desafiadora de testar seu conhecimento sobre o voleibol, e você pode jogá-lo quantas vezes quiser para aprimorar seus conhecimentos. Além disso, após concluir o quiz, você terá acesso a gráficos detalhados que mostram sua pontuação, tanto de acertos quanto de erros.</p>
-                        <button class="btnQuiz">Vamos lá</button>
+                        <button onclick="btnQuiz()" class="btnQuiz">Vamos lá</button>
                     </div>
                     <div class="animacao">
                         <div class="bolinha">
@@ -222,6 +226,7 @@
                     
                 </div>
 
+                <hr style="border: 2px solid black;" id="idSobreMim">
                 <h3 class="titulo">Sobre mim</h3>
                 <div class="imgTexto">
                     <img class="imgDesenvolvedora" src="./assets/imgs/euDev.jpeg">
@@ -235,17 +240,7 @@
                 <footer class="footer-container">
                       <div class="footer-left">
                 
-                        <h3><img src="../public/assets/imgs/logoVolei.png" class="logo-footer">Hora do Vôlei</h3>
-                
-                        <p class="footer-links">
-                          <a href="#" class="link-1">Home</a>
-                          <a href="#">Projeto</a>
-                          <a href="#">História</a>
-                          <a href="#">Jogadores</a>
-                          <a href="#">Quiz</a>
-                          <a href="#">Sobre mim</a>
-                          <a href="#">Login</a>
-                        </p>
+                        <h3><img src="./assets/imgs/logoVolei.png" class="logo-footer">Hora do Vôlei</h3>
                 
                         <p class="footer-company-name">Copyright © 2023</p>
                       </div>
@@ -280,4 +275,6 @@
 
 </body>
 </html>
+
+
 

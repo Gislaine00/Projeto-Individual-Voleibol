@@ -40,3 +40,6 @@ function mostrarSenha() {
 }
 
 /* QUIZ */
+function btnQuiz(){
+  window.location.href = "login.html"
+}
