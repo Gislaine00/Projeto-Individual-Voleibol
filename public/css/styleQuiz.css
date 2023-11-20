@@ -33,7 +33,7 @@ body {
     background-color: white;
     border-radius: 20px;
     border: 2px solid blue;
-    height: 300vh;
+    height: 250vh;
     width: 70%;
     margin: auto;
     margin-top: 5px;
@@ -87,16 +87,6 @@ body {
     color: white;
 }
 
-.container2{
-    background-color: white;
-    border-radius: 20px;
-    border: 2px solid blue;
-    height: 80vh;
-    width: 70%;
-    margin: auto;
-    margin-top: 5px;
-}
-
 .divSeta{
     margin-top: -3%;
     margin-left: 1250px;
@@ -107,7 +97,16 @@ body {
 }
 
 /* GRAFICO */
-
+.exibir{
+    text-align: center;
+    margin-top: 9%;
+}
+.ExGrafico{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5%;
+}
 
 
 

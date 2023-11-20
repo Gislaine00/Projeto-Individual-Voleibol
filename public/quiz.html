@@ -121,18 +121,17 @@
             </div>
         </div>
 
-        <button onclick="finalizar()" class="btnFinalizar">Finalizar</button>
-            <div id="exibir"></div>
-            
-        <div>
-            <canvas id="myChart" style="display: flex; width: 40vw; height: 40vh;"></canvas>
-        </div>
-    </div>
+            <button onclick="finalizar()" class="btnFinalizar">Finalizar</button>
 
-   <!--  <div class="container2" id="container2" style="display: none;">
-        <div id="exibir"></div>
-    </div> -->
-    
+               <div class="ExGrafico"> 
+                <div id="exibir" class="exibir"></div>
+                
+            <div style="border: 2px solid white; width: 40vh; height: 40vh;">
+                <canvas id="myChart" style="display: flex; width: 40vw; height: 40vh;"></canvas>
+            </div>
+        </div>
+</div>
+
 </body>
 </html>
 
@@ -250,68 +249,59 @@
                 }
                 
             }   
-        
-            /* mostrarGraficos(); */ 
             
             var resposta1 = "Vishh, você não conhece muito sobre vôlei";
             var resposta2 = "Você já sabe muita coisa, mas pode melhorar";
             var resposta3 = "Muito bem, você sabe muito. Parabéns";
 
             if(listaAcertos <= 4){
-                exibir.innerHTML = `${resposta1}<br>`
+                exibir.innerHTML = `<b>${resposta1}</b><br>`
             }else if(listaAcertos <=7){
-                exibir.innerHTML = `${resposta2}<br>`
+                exibir.innerHTML = `<b>${resposta2}</b><br>`
             }else{
-                exibir.innerHTML = `${resposta3}<br>`
+                exibir.innerHTML = `<b>${resposta3}</b><br>`
             }
         }
         
         var calculoAcertos = listaAcertos/10*100;
         var calculoErros = listaErros/10*100;
-        exibir.innerHTML += `Acertos: ${calculoAcertos}% <br>Erros:${calculoErros}%<br>
-            Perguntas certas: ${listaPerguntasCertas}<br> Perguntas Erradas: ${listaPerguntasErradas}`;
+        exibir.innerHTML += `<u>Acertos:</u> ${calculoAcertos}% <br><u>Erros:</u>${calculoErros}%<br>
+            <span style="color:#32CD32">Perguntas que acertou: ${listaPerguntasCertas}</span><br> <span style="color:red">Perguntas que errou: ${listaPerguntasErradas}</span>`;
 
 
-        /* graficos */
+        /* grafico */
         const ctx = document.getElementById('myChart').getContext('2d');
-        ctx.width = 40;
-        ctx.height = 40;
 
-    new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: ['Acertos', 'Erros'],
-            datasets: [{
-                data: [calculoAcertos, calculoErros],
-                borderWidth: 2,
-                borderColor: ['#00FF7F', 'red'],
-                backgroundColor: ['#00FF7F', 'red'],
-            }]
-        },
-        options: {
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        label: function (context) {
-                            let label = context.dataset.label || '';
-                            if (label) {
-                                label += ': ';
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Acertos', 'Erros'],
+                datasets: [{
+                    data: [calculoAcertos, calculoErros],
+                    borderWidth: 2,
+                    borderColor: ['black'],
+                    backgroundColor: ['#00FF7F', 'red'],
+                }]
+            },
+            options: {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                label += context.parsed + '%';
+                                return label;
                             }
-                            label += context.parsed + '%';
-                            return label;
                         }
                     }
                 }
             }
-        }
-    });
+        });
 } 
-    /* function mostrarGraficos(){
-        document.getElementById("container").style.display="none";
-        document.getElementById("container2").style.display="block";
-        exibir.innerHTML = `<span style="color:black; text-align: center; position:absolute; margin-top: 50px">Acertos: ${listaAcertos/10*100}% <br> Erros:${listaErros/10*100}%</span>`;
-    } */
-    </script>
+</script>
 
    
     
