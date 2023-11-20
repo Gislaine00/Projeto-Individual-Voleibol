@@ -6,6 +6,7 @@
     <title>Hora do Vôlei | Quiz</title>
     <link rel="icon" href="./assets/imgs/logoVolei.png" type="image/png">
     <link rel="stylesheet" href="./css/styleQuiz.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="logo">
@@ -122,21 +123,28 @@
 
         <button onclick="finalizar()" class="btnFinalizar">Finalizar</button>
             <div id="exibir"></div>
+            
+        <div>
+            <canvas id="myChart" style="display: flex; width: 40vw; height: 40vh;"></canvas>
+        </div>
     </div>
 
-    <div class="container2" id="container2" style="display: none;"></div>
+   <!--  <div class="container2" id="container2" style="display: none;">
+        <div id="exibir"></div>
+    </div> -->
+    
 </body>
 </html>
 
 <script> 
-
     function voltar(){
         window.location.href = "interno.html"
     }
 
+    function finalizar() {
     var listaAcertos = 0;
     var listaErros = 0;
-    function finalizar() {
+
     var opcoes1 = document.getElementsByName('resposta1');
     var opcoes2 = document.getElementsByName('resposta2');
     var opcoes3 = document.getElementsByName('resposta3');
@@ -153,6 +161,7 @@
 
    
     var listaPerguntasCertas=[];
+    var listaPerguntasErradas = [];
 
         for (var i = 0; i < opcoes.length; i++) {
             if (opcoes[i].checked) {
@@ -161,78 +170,149 @@
                 if (opcoes[i].name === 'resposta1') {
                     if (alternativaSelecionada === 4) {
                         listaAcertos += 1;
+                        listaPerguntasCertas.push(1);
                     } else {
                         listaErros += 1;
+                        listaPerguntasErradas.push(1);
                     }
                 } else if (opcoes[i].name === 'resposta2') {
                     if (alternativaSelecionada === 2) {
                         listaAcertos += 1;
+                        listaPerguntasCertas.push(2);
                     } else {
                         listaErros += 1;
+                        listaPerguntasErradas.push(2);
                     }
                 } else if (opcoes[i].name === 'resposta3') {
                     if (alternativaSelecionada === 3) {
                         listaAcertos += 1;
+                        listaPerguntasCertas.push(3);
                     } else {
                         listaErros += 1;
+                        listaPerguntasErradas.push(3);
                     }
                 } else if (opcoes[i].name === 'resposta4') {
                     if (alternativaSelecionada === 3) {
                         listaAcertos += 1;
+                        listaPerguntasCertas.push(4);
                     } else {
                         listaErros += 1;
+                        listaPerguntasErradas.push(4);
                     }
                 } else if (opcoes[i].name === 'resposta5') {
                     if (alternativaSelecionada === 1) {
                         listaAcertos += 1;
+                        listaPerguntasCertas.push(5);
                     } else {
                         listaErros += 1;
+                        listaPerguntasErradas.push(5);
                     }
                 } else if (opcoes[i].name === 'resposta6') {
                     if (alternativaSelecionada === 4) {
                         listaAcertos += 1;
+                        listaPerguntasCertas.push(6);
                     } else {
                         listaErros += 1;
+                        listaPerguntasErradas.push(6);
                     }
                 } else if (opcoes[i].name === 'resposta7') {
                     if (alternativaSelecionada === 3) {
                         listaAcertos += 1;
+                        listaPerguntasCertas.push(7);
                     } else {
                         listaErros += 1;
+                        listaPerguntasErradas.push(7);
                     }
                 } else if (opcoes[i].name === 'resposta8') {
                     if (alternativaSelecionada === 2) {
                         listaAcertos += 1;
+                        listaPerguntasCertas.push(8);
                     } else {
                         listaErros += 1;
+                        listaPerguntasErradas.push(8);
                     }
                 } else if (opcoes[i].name === 'resposta9') {
                     if (alternativaSelecionada === 1) {
                         listaAcertos += 1;
+                        listaPerguntasCertas.push(9);
                     } else {
                         listaErros += 1;
+                        listaPerguntasErradas.push(9);
                     }
                 } else if (opcoes[i].name === 'resposta10') {
                     if (alternativaSelecionada === 2) {
                         listaAcertos += 1;
+                        listaPerguntasCertas.push(10);
                     } else {
                         listaErros += 1;
+                        listaPerguntasErradas.push(10);
                     }
                 }
                 
             }   
-            exibir.innerHTML = `<span style="display:flex; text-align: center; align-items: center;">Acertos: ${listaAcertos/10*100}% <br>Erros:${listaErros/10*100}%</span>`;
-        }
-       /*  mostrarGraficos(); */
-    }
+        
+            /* mostrarGraficos(); */ 
+            
+            var resposta1 = "Vishh, você não conhece muito sobre vôlei";
+            var resposta2 = "Você já sabe muita coisa, mas pode melhorar";
+            var resposta3 = "Muito bem, você sabe muito. Parabéns";
 
+            if(listaAcertos <= 4){
+                exibir.innerHTML = `${resposta1}<br>`
+            }else if(listaAcertos <=7){
+                exibir.innerHTML = `${resposta2}<br>`
+            }else{
+                exibir.innerHTML = `${resposta3}<br>`
+            }
+        }
+        
+        var calculoAcertos = listaAcertos/10*100;
+        var calculoErros = listaErros/10*100;
+        exibir.innerHTML += `Acertos: ${calculoAcertos}% <br>Erros:${calculoErros}%<br>
+            Perguntas certas: ${listaPerguntasCertas}<br> Perguntas Erradas: ${listaPerguntasErradas}`;
+
+
+        /* graficos */
+        const ctx = document.getElementById('myChart').getContext('2d');
+        ctx.width = 40;
+        ctx.height = 40;
+
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Acertos', 'Erros'],
+            datasets: [{
+                data: [calculoAcertos, calculoErros],
+                borderWidth: 2,
+                borderColor: ['#00FF7F', 'red'],
+                backgroundColor: ['#00FF7F', 'red'],
+            }]
+        },
+        options: {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            label += context.parsed + '%';
+                            return label;
+                        }
+                    }
+                }
+            }
+        }
+    });
+} 
     /* function mostrarGraficos(){
         document.getElementById("container").style.display="none";
         document.getElementById("container2").style.display="block";
-        exibir.innerHTML = `<span style="position:absolute; color:black">Acertos: ${listaAcertos/10*100}% <br> Erros:${listaErros/10*100}%</span>`;
+        exibir.innerHTML = `<span style="color:black; text-align: center; position:absolute; margin-top: 50px">Acertos: ${listaAcertos/10*100}% <br> Erros:${listaErros/10*100}%</span>`;
     } */
-            
+    </script>
 
-
-
-</script>
+   
+    
+        
