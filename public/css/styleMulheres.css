@@ -34,12 +34,21 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 
 .divTextinho{
     width: 70%;
     font-family: "minhafonte";
+}
+
+h1 {
+    font-size: 45px; 
+    text-shadow: 
+        -2px -2px 0 yellow,
+        2px -2px 0 yellow,
+        -2px 2px 0 yellow,
+        2px 2px 0 yellow; 
+    text-align: center;
 }
 
 .textinho{
@@ -54,4 +63,15 @@ body {
 
 .imgSeta{
     cursor: pointer;
+}
+
+.videos{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+iframe{
+    box-shadow: 0 4px 8px rgb(0, 255, 0);
 }
