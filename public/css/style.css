@@ -69,7 +69,6 @@
   .changeStyle {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 1em yellow;
-    
   }
     
   .logo {
@@ -191,12 +190,12 @@
 
   .divTextoHeader{
     text-align:center;
-    z-index: 999; 
+    z-index: 1; 
     color: white;
     margin-left:10%; 
     margin-top:40vh;
     height: 15vh; 
-    width: 40%; 
+    width: 30%; 
     position: absolute; 
     display: flex; 
     align-items: center; 
