@@ -17,7 +17,7 @@ body {
 }
 
 .logo-img {
-    width: 60px;
+    width: 50px;
     height: auto;
     border-radius: 50%;
     vertical-align: middle;
@@ -30,7 +30,7 @@ body {
 .container{
     height: 90vh;
     width: 100%;
-    margin-top: -45px;
+    margin-top: -55px;
     display: flex;
     align-items: center;
     justify-content: center;

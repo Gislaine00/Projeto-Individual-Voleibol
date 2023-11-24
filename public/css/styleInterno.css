@@ -10,6 +10,7 @@ body {
     font-family: "minhafonte";
 }
 .logo {
+    margin: 15px;
     display: flex;
     flex-direction: row;
     font-weight: 800;
@@ -28,7 +29,13 @@ body {
 }
 
 .botoes{
+    margin-top: -30px;
+    justify-content: center;
+    align-items: center;
     height: 87vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
 }
 
 .btnLeft{
@@ -45,7 +52,6 @@ body {
     margin-right: 70px;
     align-items:flex-end; 
     margin-top: 20px;
-    margin-top: -37.8%;
 }
 
 .btnQuiz, .btnHomens{
