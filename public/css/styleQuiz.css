@@ -3,6 +3,28 @@
     src:url("../assets/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVtaooCPNLA3JC9c.ttf");
 }
 
+/* Scrollbar*/
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(53, 50, 50);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(13, 67, 177);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(118, 152, 221);
+    border-radius: 10px;
+  }
+
 body {
     margin: 0;
     background-color: #000000;
