@@ -38,6 +38,7 @@
 
                 <label class="labelForm">Senha:</label>
                 <input class="inputSenha" id="inputSenha" type="password" placeholder="Sua senha"><br>
+                <p style="color: black; font-size: 10px; display: flex; justify-content: left;">*Sua senha precisa ter 6 dígitos</p>
             </div>
             
             <div class="botao">
@@ -67,13 +68,19 @@
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
-      nickVar == " "
+      nickVar == ""
     ) {
-        alert("ERRO")
-
+      alert("Preencha todos os campos para efetuar o cadastro.")
       return false;
-    } else {
-      setInterval(5000);
+    } else if(senhaVar.length < 6 || senhaVar.length > 6){
+      alert("O campo de senha precisa ter 6 dígitos")
+      return false;
+    } else if(emailVar.indexOf('@') === -1 || emailVar.indexOf('.com') === -1){
+      alert("Email Inválido!")
+      return false;
+    }else {
+      alert("Cadastro Realizado!")
+      setInterval(1000);
     }
 
     // Enviando o valor da nova input
@@ -97,7 +104,7 @@
         if (resposta.ok) {
           setTimeout(() => {
             window.location.href ="login.html";
-          }, "2000");
+          }, "1000");
 
  
         } else {
