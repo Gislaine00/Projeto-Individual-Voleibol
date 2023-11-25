@@ -86,13 +86,12 @@
 
                     setTimeout(function () {
                         window.location.href = "./interno.html";
-                    }, 1000); // apenas para exibir o loading
-                    alert("foi");
+                    }, 500); // apenas para exibir o loading
 
                 });
 
             } else {
-
+                alert("Login ou senha incorretos!");
                 console.log("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {
