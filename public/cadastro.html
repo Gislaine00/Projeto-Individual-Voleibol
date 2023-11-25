@@ -30,6 +30,9 @@
                 <label class="labelForm">Nome:</label>
                 <input class="inputNome" id="inputNome" placeholder="Ex. Gislaine"><br>
 
+                <label class="labelForm">Nickname:</label>
+                <input class="inputNick" id="inputNick" placeholder="Ex. Gis1"><br>
+
                 <label class="labelForm">E-mail:</label>
                 <input class="inputCad" id="inputEmail" placeholder="Ex. gislaine@gmail.com"><br>
 
@@ -56,13 +59,15 @@
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
     var nomeVar = inputNome.value;
+    var nickVar = inputNick.value;
     var emailVar = inputEmail.value;
     var senhaVar = inputSenha.value;
 
     if (
       nomeVar == "" ||
       emailVar == "" ||
-      senhaVar == "" 
+      senhaVar == "" ||
+      nickVar == " "
     ) {
         alert("ERRO")
 
@@ -81,6 +86,7 @@
         // crie um atributo que recebe o valor recuperado aqui
         // Agora vá para o arquivo routes/usuario.js
         nomeServer: nomeVar,
+        nickServer: nickVar,
         emailServer: emailVar,
         senhaServer: senhaVar
       }),

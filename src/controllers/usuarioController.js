@@ -29,7 +29,7 @@ async function autenticar(req, res) {
 
             const [resultadoQuiz, nickname] = await Promise.all([quizModel.buscarQuiz(id_Usuario), nicknameModel.buscarNickname(id_Usuario)]);
 
-            if (resultadoQuiz.length > 0 && nickname.length > 0) {
+            if (nickname.length > 0) {
                 res.json({
                     id: resultadoAutenticar[0].idUsuario,
                     email: resultadoAutenticar[0].email,
@@ -39,7 +39,7 @@ async function autenticar(req, res) {
                     nick: nickname
                 });
             } else {
-                res.status(204).json({ especies: [] })
+                res.status(204).json({ quiz: [] })
             }
         } else if (!resultadoAutenticar || resultadoAutenticar.length === 0) {
             alert('Email e/ou senha inválido(s)');
@@ -54,18 +54,19 @@ async function autenticar(req, res) {
     }
 }
 
-
-
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
+    var nick = req.body.nickServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
-    } else if (email == undefined) {
+    } else if (nick == undefined) {
+        res.status(400).send("Seu nickname está undefined!");
+    }else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
@@ -75,9 +76,13 @@ function cadastrar(req, res) {
         usuarioModel.cadastrar(nome, email, senha)
             .then(
                 function (resultado) {
-                    res.json(resultado);
+                    var idUsuario = resultado.insertId
+                    return nicknameModel.cadastrarNick(idUsuario, nick)
                 }
-            ).catch(
+            
+            ).then(function(resultadoNick){
+                res.json(resultadoNick);
+            }).catch(
                 function (erro) {
                     console.log(erro);
                     console.log(

@@ -65,7 +65,7 @@ body{
   font-weight: normal;
 }
 
-.inputCad, .inputSenha, .inputNome, .inputEstado{
+.inputCad, .inputSenha, .inputNome, .inputEstado, .inputNick{
   width: 300px;
   height: 18%;
   border: 1px solid black;
@@ -91,6 +91,10 @@ body{
   box-shadow: 3px 2px 0px 0px yellow;
 }
 
+.inputNick:focus{
+  box-shadow: 3px 2px 0px 0px yellow;
+}
+
 .inpMostrarSenha {
   margin-right: 60%;
   margin-top: 18%;
@@ -103,6 +107,7 @@ body{
 }
 
 .botao{
+  margin-top: 20%;
   margin-left: 10%;
   display: flex;
   flex-direction: row;
@@ -110,10 +115,9 @@ body{
 }
 
 .btnCancelar{
-  margin-top: 5vh;
   margin-bottom: 5vh;
   width: 200px;
-  height: 50%;
+  height: 40px;
   border-radius: 10px;
   color: black;
   border-color: yellow;
@@ -127,10 +131,9 @@ body{
 }
 
 .btnCadastrar{
-  margin-top: 5vh;
   margin-bottom: 5vh;
   width: 200px;
-  height: 50%;
+  height: 40px;
   border-radius: 10px;
   color: black;
   border-color: blue;

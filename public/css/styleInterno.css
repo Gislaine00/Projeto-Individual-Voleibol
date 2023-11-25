@@ -15,6 +15,15 @@ body {
     flex-direction: row;
     font-weight: 800;
     font-size: 20px;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.nicknameExibir{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-img {

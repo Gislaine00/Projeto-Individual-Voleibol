@@ -9,8 +9,11 @@
 </head>
 <body>
     <div class="logo">
-        <img id="idLogo" src="./assets/imgs/logoVolei.png" alt="logo" class="logo-img">
-        <p class="nomeProjeto">Hora do Vôlei</p>
+        <div style="display: flex;">
+            <img id="idLogo" src="./assets/imgs/logoVolei.png" alt="logo" class="logo-img">
+            <p class="nomeProjeto">Hora do Vôlei</p>
+        </div>
+        <div class="nicknameExibir" id="nickExibir"></div>
     </div>
 
     <div class="botoes">
@@ -50,6 +53,8 @@
 
 <script>
     var nick = JSON.parse(sessionStorage.NICKNAME);
+    nickExibir.innerHTML = nick[0].nickname
+
     function quiz(){
         window.location.href = "quiz.html"
     }

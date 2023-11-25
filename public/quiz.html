@@ -249,17 +249,15 @@
                 }
                 
             }   
-            
-            var resposta1 = "Vishh, você não conhece muito sobre vôlei";
-            var resposta2 = "Você já sabe muita coisa, mas pode melhorar";
-            var resposta3 = "Muito bem, você sabe muito. Parabéns";
+
+            var resposta = ""
 
             if(listaAcertos <= 4){
-                exibir.innerHTML = `<b>${resposta1}</b><br>`
+                exibir.innerHTML = `<b>${resposta = "vishh, você não conhece muito sobre vôlei"}</b><br>`
             }else if(listaAcertos <=7){
-                exibir.innerHTML = `<b>${resposta2}</b><br>`
+                exibir.innerHTML = `<b>${resposta ="Você já sabe muita coisa, mas pode melhorar"}</b><br>`
             }else{
-                exibir.innerHTML = `<b>${resposta3}</b><br>`
+                exibir.innerHTML = `<b>${resposta = "Muito bem, você sabe muito. Parabéns"}</b><br>`
             }
         }
         
@@ -301,6 +299,7 @@
             }
         });
 } 
+
 </script>
 
    

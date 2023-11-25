@@ -7,4 +7,12 @@ function buscarNickname(idNickname) {
     return database.executar(instrucaoSql);
   }
 
-  module.exports = { buscarNickname};
+  function cadastrarNick(idNick, nickname) {
+  
+    instrucaoSql = `insert into nickname (nickname, fkUsuario) values ('${nickname}', ${idNick})`;
+  
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+  }
+
+  module.exports = {buscarNickname, cadastrarNick};
