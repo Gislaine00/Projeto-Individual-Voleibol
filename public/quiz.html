@@ -126,16 +126,22 @@
                 <button onclick="tentar()" class="btnTentar">Tente novamente</button>
             </div>
 
-               <div class="ExGrafico"> 
-                <div id="exibir" class="exibir"></div>
-                
-            <div style="border: 2px solid white; width: 40vh; height: 40vh;">
-                <canvas id="myChart" style="display: flex; width: 40vw; height: 40vh;"></canvas>
-            </div>
 
-            <div id="exibir1">
-            </div>
-        </div>
+                <div class="ExGrafico"> 
+                    <div id="exibir" class="exibir"></div>
+                
+                    <div style="border: 2px solid white; width: 40vh; height: 40vh;">
+                        <canvas id="myChart" style="display: flex; width: 40vw; height: 40vh;"></canvas>
+                    </div>
+                    <hr id="hrVertical" style="display: none; margin-left: 5px;">
+                   
+                    <div id="exibir1">
+                        <h1 id="idH1" style="display: none; font-size: 20px; text-align: center;">Ranking de Pontuações(%)</h1>
+                        <div>
+                            <canvas id="myChartBarra" style="width: 30vw; height: 40vh;"></canvas>
+                          </div>
+                    </div>
+                </div>
 </div>
 
 </body>
@@ -306,13 +312,45 @@
 
         desativarRadios();
 
+        document.getElementById('hrVertical').style.display = 'block';
+        document.getElementById('idH1').style.display = 'block';
+
         var listaRanking = [];
         var ranking = JSON.parse(sessionStorage.QUIZ);
         for(var i = 0; i < ranking.length; i++){
-            exibir1.innerHTML += ranking[i].pontuacaoAcertos;
-
-            listaRanking.push(ranking[i].pontuacaoAcertos);
+            listaRanking.push(ranking[i].pontuacaoAcertos); 
+       
         }
+
+        const ctx2 = document.getElementById('myChartBarra').getContext('2d');
+
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['1° lugar', '2° lugar', '3° lugar', '4° lugar', '5° lugar'],
+                datasets: [{
+                    data: listaRanking,
+                    borderWidth: 1,
+                    borderColor: 'black',
+                    backgroundColor: ['#00FF7F', 'red', 'pink', 'orange', 'purple'],
+                    label: 'Pontuação',
+                }],
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                },
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                },
+                indexAxis: 'y',
+            },
+        });
+
 
     var idUsuario = sessionStorage.ID_USUARIO;
     fetch("/quiz/cadastrar", {
@@ -332,7 +370,7 @@
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            alert("ta indo");
+            console.log("ta indo");
  
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
