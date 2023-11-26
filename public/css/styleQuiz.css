@@ -56,7 +56,7 @@ body {
     background-color: white;
     border-radius: 20px;
     border: 2px solid blue;
-    height: 250vh;
+    height: 300vh;
     width: 70%;
     margin: auto;
     margin-top: 5px;
@@ -80,11 +80,23 @@ body {
 }
 
 .btnFinalizar{
-    margin-top: 15px;
     width: 25%;
     height: 30px;
     border-radius: 13px;
-    margin-left: 37%;
+    color: black;
+    border-color: blue;
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    font-family: 'minhaFonte';
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .btnTentar{
+    width: 25%;
+    height: 30px;
+    border-radius: 13px;
     color: black;
     border-color: blue;
     background-color: white;
@@ -106,6 +118,11 @@ body {
 }
 
 .btnFinalizar:hover{
+    background-color: blue;
+    color: white;
+}
+
+.btnTentar:hover{
     background-color: blue;
     color: white;
 }

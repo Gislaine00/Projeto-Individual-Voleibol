@@ -45,9 +45,11 @@
 </html>
 
 <script>
+    
     function entrar(){
         var emailVar = inputEmail.value;
         var senhaVar = inputSenha.value;
+        sessionStorage.SENHA_USUARIO = senhaVar;
 
         if (emailVar == "" || senhaVar == "") {
             alert("Mensagem de erro para todos os campos em branco");

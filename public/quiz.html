@@ -121,13 +121,19 @@
             </div>
         </div>
 
-            <button onclick="finalizar()" class="btnFinalizar">Finalizar</button>
+            <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 15px; margin-top: 10px;">
+                <button onclick="finalizar()" class="btnFinalizar">Finalizar</button>
+                <button onclick="tentar()" class="btnTentar">Tente novamente</button>
+            </div>
 
                <div class="ExGrafico"> 
                 <div id="exibir" class="exibir"></div>
                 
             <div style="border: 2px solid white; width: 40vh; height: 40vh;">
                 <canvas id="myChart" style="display: flex; width: 40vw; height: 40vh;"></canvas>
+            </div>
+
+            <div id="exibir1">
             </div>
         </div>
 </div>
@@ -139,7 +145,7 @@
     function voltar(){
         window.location.href = "interno.html"
     }
-
+    
     function finalizar() {
     var listaAcertos = 0;
     var listaErros = 0;
@@ -250,14 +256,14 @@
                 
             }   
 
-            var resposta = ""
+            var analise= ""
 
             if(listaAcertos <= 4){
-                exibir.innerHTML = `<b>${resposta = "vishh, você não conhece muito sobre vôlei"}</b><br>`
+                exibir.innerHTML = `<b>${analise = "vishh, você não conhece muito sobre vôlei"}</b><br>`
             }else if(listaAcertos <=7){
-                exibir.innerHTML = `<b>${resposta ="Você já sabe muita coisa, mas pode melhorar"}</b><br>`
+                exibir.innerHTML = `<b>${analise ="Você já sabe muita coisa, mas pode melhorar"}</b><br>`
             }else{
-                exibir.innerHTML = `<b>${resposta = "Muito bem, você sabe muito. Parabéns"}</b><br>`
+                exibir.innerHTML = `<b>${analise = "Muito bem, você sabe muito. Parabéns"}</b><br>`
             }
         }
         
@@ -266,10 +272,9 @@
         exibir.innerHTML += `<u>Acertos:</u> ${calculoAcertos}% <br><u>Erros:</u>${calculoErros}%<br>
             <span style="color:#32CD32">Perguntas que acertou: ${listaPerguntasCertas}</span><br> <span style="color:red">Perguntas que errou: ${listaPerguntasErradas}</span>`;
 
-
-        /* grafico */
+        
+            /* grafico */
         const ctx = document.getElementById('myChart').getContext('2d');
-
         new Chart(ctx, {
             type: 'doughnut',
             data: {
@@ -298,7 +303,64 @@
                 }
             }
         });
-} 
+
+        desativarRadios();
+
+        var listaRanking = [];
+        var ranking = JSON.parse(sessionStorage.QUIZ);
+        for(var i = 0; i < ranking.length; i++){
+            exibir1.innerHTML += ranking[i].pontuacaoAcertos;
+
+            listaRanking.push(ranking[i].pontuacaoAcertos);
+        }
+
+    var idUsuario = sessionStorage.ID_USUARIO;
+    fetch("/quiz/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: idUsuario,
+        acertosServer: listaAcertos,
+        errosServer: listaErros
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            alert("ta indo");
+ 
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+
+      });
+
+    return false;
+        
+    
+}
+
+
+
+function desativarRadios() {
+    const radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach(radio => {
+        radio.disabled = true;
+    });
+}
+
+function tentar() {
+    location.reload();
+}
+
 
 </script>
 
