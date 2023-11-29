@@ -20,7 +20,7 @@
   </div>
 
   # Slides da apresentação:
-  <a href="https://view.genial.ly/6564d837e8dc7a0014fb01ce/presentation-hora-do-volei-apresentacao)https://view.genial.ly/6564d837e8dc7a0014fb01ce/presentation-hora-do-volei-apresentacao" target="_blank">Apresentação - Hora do Vôlei</a>
+  <a href="https://view.genial.ly/6564d837e8dc7a0014fb01ce/presentation-hora-do-volei-apresentacao" target="_blank">Apresentação - Hora do Vôlei</a>
 
   # Observações:
   <ul>
